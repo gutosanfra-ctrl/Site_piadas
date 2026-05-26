@@ -9,63 +9,71 @@
 
 <style>
 
-body{
-    background-image: url("fundo.png");
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-
+/* RESET BÁSICO */
+*{
     margin: 0;
-    padding: 40px;
-
-    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Título */
+/* FUNDO */
+body{
+    font-family: Arial, Helvetica, sans-serif;
 
+    background-image: url("fundo.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    padding: 30px;
+}
+
+/* TÍTULO */
 h1{
     text-align: center;
     color: rgb(0, 174, 255);
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
-/* Galeria */
-
+/* GRADE RESPONSIVA */
 .galeria{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 30px;
+
+    max-width: 1200px;
+    margin: auto;
 }
 
-/* Quadros */
-
+/* CARD */
 .card{
     text-align: center;
-    max-width: 220px;
 }
 
+/* IMAGEM */
 .card img{
-    width: 218px;
-    height: 383px;
+    width: 100%;
+    height: auto;
 
     border-radius: 10px;
 
-    box-shadow: 0px 0px 15px black;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
 }
 
-/* Textos */
-
+/* TEXTO */
 .card h3{
-    color: rgb(87, 74, 0);
-
-    background-color: rgba(255,255,255,0.7);
+    margin-top: 10px;
 
     padding: 10px;
 
+    background: rgba(255,255,255,0.75);
+
     border-radius: 10px;
 
-    margin-top: 15px;
+    color: rgb(87, 74, 0);
+    font-size: 16px;
 }
 
 </style>
@@ -73,55 +81,33 @@ h1{
 
 <body>
 
-<h1>Galeria de Obras</h1>
+<h1>Galeria de Animais</h1>
 
 <div class="galeria">
 
     <div class="card">
-        <img src="cachorro.jpg" alt="Imagem de um cachorro">
-
-        <h3>
-        Um belo auto retrato de<br>
-        sua beleza.
-        </h3>
+        <img src="cachorro.jpg" alt="Cachorro">
+        <h3>Um belo auto retrato de sua beleza.</h3>
     </div>
 
     <div class="card">
-        <img src="cavalo.jpg" alt="Imagem de um cavalo">
-
-        <h3>
-        Se os dentes são assim<br>
-        imagine a ferradura
-        </h3>
+        <img src="cavalo.jpg" alt="Cavalo">
+        <h3>Se os dentes são assim, imagine a ferradura.</h3>
     </div>
 
     <div class="card">
-        <img src="coruja.jpg" alt="Imagem de uma coruja">
-
-        <h3>
-        Felicidades depois de<br>
-        Harry finalmente<br>
-        pagar o 13º
-        </h3>
+        <img src="coruja.jpg" alt="Coruja">
+        <h3>Felicidades depois de Harry pagar o 13º.</h3>
     </div>
 
     <div class="card">
-        <img src="cabra.jpg" alt="Imagem de uma cabra">
-
-        <h3>
-        Não há necessidade de<br>
-        zuar cabras,<br>
-        já nascem macabras
-        </h3>
+        <img src="cabra.jpg" alt="Cabra">
+        <h3>Não há necessidade de zuar cabras.</h3>
     </div>
 
     <div class="card">
-        <img src="lobo.jpg" alt="Imagem de um lobo">
-
-        <h3>
-        Postura de gamer<br>
-        é realmente igualzinho
-        </h3>
+        <img src="lobo.jpg" alt="Lobo">
+        <h3>Postura de gamer é igualzinho.</h3>
     </div>
 
 </div>
